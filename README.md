@@ -79,7 +79,5 @@ The notebook at `notebooks/finetune_unsloth_gemma4_sos.ipynb` contains the full 
 
 - [Kaggle Notebook](https://www.kaggle.com/code/abhishekguptaagp/gemma4-sos-finetuning)
 - [Fine-tuned LoRA Weights](https://huggingface.co/agp-369/gemma-4-e2b-sos-lora)
-- [Demo Video](https://youtu.be/PASTE_YOUR_VIDEO_ID_HERE)
-- [Competition Writeup](https://www.kaggle.com/competitions/gemma-4-good-hackathon/writeups/367068) (Kaggle writeup)
-- [Unsloth Track Details](https://unsloth.ai/docs/models/gemma-4/train.md)
-- [Gemma 4 Good Hackathon](https://www.kaggle.com/competitions/gemma-4-good-hackathon)
+- [Demo Video](https://youtu.be/6WiiFCjpFwQ)
+- [Competition Writeup](https://www.kaggle.com/competitions/gemma-4-good-hackathon) (Kaggle page)
