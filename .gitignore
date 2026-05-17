@@ -38,6 +38,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+android/build/
 
 # Python
 __pycache__/
@@ -93,3 +94,9 @@ docs/
 
 # Dev status files
 **/status.md
+
+# Screen recordings / demo media (large files, not part of source)
+*.mp4
+*.m4a
+*.mov
+*.avi
