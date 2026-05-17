@@ -7,7 +7,7 @@ Runs entirely on-device. No internet. No cloud. Just a phone.
 
 A Flutter Android app that loads a fine-tuned Gemma 4 E2B model locally and uses it for medical triage, SOS broadcasts, and peer-to-peer data sharing in disaster scenarios where networks are down.
 
-The model was fine-tuned on 2000 synthetic triage cases using Unsloth + LoRA on a Kaggle T4 GPU. The final loss was 0.1424. The LoRA adapter (124 MB) is the only thing separating a general Gemma 4 from a disaster response specialist.
+The model was fine-tuned on 2000 synthetic triage + FEMA cases using Unsloth + LoRA on a Kaggle T4 GPU. The final loss was **0.1424** in **826 seconds** (13.8 min total notebook runtime). The LoRA adapter (124 MB, 31M trainable params, 0.60% of 5.15B) is the only thing separating a general Gemma 4 from a disaster response specialist.
 
 ## Features
 
@@ -21,14 +21,14 @@ The model was fine-tuned on 2000 synthetic triage cases using Unsloth + LoRA on 
 
 ```
 Training (Kaggle T4):
-  Gemma 4 E2B 4-bit → Unsloth LoRA rank 16 → 0.14 loss
+  Gemma 4 E2B 4-bit → Unsloth LoRA rank 16 → 0.14 loss in 826s
 
 Deployment (Infinix Smart 7 / Helio G37):
   .litertlm model file (2.59 GB) → flutter_gemma → LiteRT-LM CPU backend
-  LoRA adapter → applied at model load
+  LoRA adapter → Python inference only (flutter_gemma FFI path doesn't support LoRA)
 ```
 
-The model runs via LiteRT-LM's FFI path using XNNPack-optimized CPU inference. First load builds a weight cache (~4 min). Subsequent inference takes 10-15 seconds per response on this hardware.
+The model runs via LiteRT-LM's FFI path using XNNPack-optimized CPU inference. First load builds a weight cache (~4 min). Single inference takes 10-15 seconds, but only the first call succeeds — the compiled model crashes on subsequent invocations on Helio G37.
 
 ## Project Structure
 
@@ -79,5 +79,7 @@ The notebook at `notebooks/finetune_unsloth_gemma4_sos.ipynb` contains the full 
 
 - [Kaggle Notebook](https://www.kaggle.com/code/abhishekguptaagp/gemma4-sos-finetuning)
 - [Fine-tuned LoRA Weights](https://huggingface.co/agp-369/gemma-4-e2b-sos-lora)
-- [Competition Writeup](https://www.kaggle.com/competitions/gemma-4-good-hackathon/writeups/...)
+- [Demo Video](https://youtu.be/PASTE_YOUR_VIDEO_ID_HERE)
+- [Competition Writeup](https://www.kaggle.com/competitions/gemma-4-good-hackathon/writeups/367068) (Kaggle writeup)
 - [Unsloth Track Details](https://unsloth.ai/docs/models/gemma-4/train.md)
+- [Gemma 4 Good Hackathon](https://www.kaggle.com/competitions/gemma-4-good-hackathon)
