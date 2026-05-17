@@ -1,0 +1,86 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+*.egg
+.pytest_cache/
+
+# Database / generated data
+disaster_protocols.db
+chromadb_data/
+
+# Generated training data
+scripts/generated_dataset.json
+
+# Large model files - DO NOT commit to git (2.5 GB)
+assets/models/*.litertlm
+assets/models/.cache/
+
+# Benchmark outputs
+benchmark_results/
+*.benchmark.json
+
+# Kaggle artifacts
+gemma4-sos-lora/
+gemma4-sos-merged-4bit/
+gemma4-sos-lora.zip
+gemma4-sos-finetuning.log
+notebooks/logs/
+unsloth_compiled_cache/
+notebooks/.ipynb_checkpoints/
+
+# Local docs / planning
+BATTLE_PLAN.md
+GUIDE.md
+GEMINI.md
+KAGGLE_SUBMISSION.md
+SUBMISSION_GUIDE.md
+WORKSPACE_STATE.md
+challenge_overview.txt
+requirements.txt
+
+# OS generated
+.DS_Store
+Thumbs.db

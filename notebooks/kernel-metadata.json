@@ -1,0 +1,14 @@
+{
+  "id": "abhishekguptaagp/gemma4-sos-finetuning",
+  "title": "gemma4-sos-finetuning",
+  "code_file": "finetune_unsloth_gemma4_sos.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
