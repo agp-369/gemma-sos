@@ -84,3 +84,12 @@ requirements.txt
 # OS generated
 .DS_Store
 Thumbs.db
+
+# Python agent (not part of Flutter app)
+src/
+scripts/
+ollama/
+docs/
+
+# Dev status files
+**/status.md
