@@ -80,3 +80,4 @@ The notebook at `notebooks/finetune_unsloth_gemma4_sos.ipynb` contains the full 
 - [Kaggle Notebook](https://www.kaggle.com/code/abhishekguptaagp/gemma4-sos-finetuning)
 - [Fine-tuned LoRA Weights](https://huggingface.co/agp-369/gemma-4-e2b-sos-lora)
 - [Competition Writeup](https://www.kaggle.com/competitions/gemma-4-good-hackathon/writeups/...)
+- [Unsloth Track Details](https://unsloth.ai/docs/models/gemma-4/train.md)
